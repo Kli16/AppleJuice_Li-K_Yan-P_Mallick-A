@@ -77,35 +77,54 @@ public class QuickSort
      *** qsort(arr, pvtPos + 1, right)
 
      **/
-    public static void qsort( int[] d ) 
-	{ 
-	    qsortH(d, 0, d.length-1);
+    public static void qsort( int[] d, int pvtType ) 
+	{
+	    // pvtType refers to the choice of pivot
+	    if (pvtType > 0 && pvtType < 4) {
+		qsortH(d, 0, d.length-1,pvtType);
 	    }
+	    else {
+		return;
+	    }
+	}
 
     // Thinkers are encouraged to roll their own subroutines.
     // Insert your auxiliary helper methods here.
 
-    public static void qsortH(int[] arr, int left, int right) {
+    public static void qsortH(int[] arr, int left, int right, int pvt) {
+	// pvt indicates pivot position used, as tasked to us
+	// 1 = first member of array, 2 = midpoint, 3 = last member of an array
+	int pivotPos;
 	if (left<right) {
-	    int pivotPos= partition(arr, left, right, right);
-	    qsortH(arr, left, pivotPos-1);
-	    qsortH(arr, pivotPos+1, right);
+	    if (pvt == 1) {
+		pivotPos= partition(arr, left, right, left);
+	    }
+	    else if (pvt == 2) {
+		pivotPos= partition(arr, left, right, ( (left + right) / 2));
+	    }
+	    else if (pvt == 3) {
+		pivotPos = partition(arr,left,right, right);
+	    }
+	    else {
+		System.out.println ("ERROR: PIVOT POINT DOES NOT EXIST");
+		pivotPos = -1; // causes an error
+		return;
+	    }
+	    qsortH(arr, left, pivotPos-1,pvt);
+	    qsortH(arr, pivotPos+1, right,pvt);
 	}
     }
     public static int partition( int arr[], int lowerBound, int upperBound, int pvt)
     {
 	int v = arr[pvt];
-
 	swap( pvt, upperBound, arr);
 	int s = lowerBound;
-
 	for( int i = lowerBound; i < upperBound; i++ ) {
 	    if ( arr[i] <= v) {
 		swap( i, s, arr );
 		s++;}
 	}
 	swap(s,upperBound,arr);
-
 	return s;
     }
 
@@ -117,7 +136,7 @@ public class QuickSort
 	int [] arr1 = {7,1,5,12,3};
 	System.out.println("\narr1 init'd to: " );
 	printArr(arr1);
-	qsort( arr1 );	
+	qsort( arr1, 3);	
        	System.out.println("arr1 after qsort: " );
 	printArr(arr1);
 	// randomly-generated arrays of n distinct vals
@@ -130,7 +149,7 @@ public class QuickSort
        	shuffle(arrN);
        	System.out.println("arrN post-shuffle: " );
 	printArr(arrN);
-	qsort( arrN );
+	qsort( arrN,3 );
 	System.out.println("arrN after sort: " );
 	printArr(arrN);
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -141,7 +160,7 @@ public class QuickSort
 	int [] arr2 = {7,1,5,12,3,7};
 	System.out.println("\narr2 init'd to: " );
 	printArr(arr2);
-	qsort( arr2 );	
+	qsort( arr2,3 );	
        	System.out.println("arr2 after qsort: " );
 	printArr(arr2);
 	// arrays of randomly generated ints
@@ -154,7 +173,7 @@ public class QuickSort
        	shuffle(arrMatey);
        	System.out.println("arrMatey post-shuffle: " );
 	printArr(arrMatey);
-	qsort( arrMatey );
+	qsort( arrMatey,3);
 	System.out.println("arrMatey after sort: " );
 	printArr(arrMatey);
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
