@@ -1,6 +1,6 @@
 # AppleJuice
-Kevin Li, Pacy Yan, Alitquan Mallick
-PERIOD 4
+<p> Kevin Li, Pacy Yan, Alitquan Mallick </p>
+<p> PERIOD 4 </p>
 
 <h2> QUICK SORT ALGORITHM: </h2>
 <p> QSort(arr): Uses a partition to separate numbers less than or greater than a given value in the array, and then recurses the process on the subarrays to the left and right of the partition, until the subarrays no longer need to be sorted, and all values are guaranteed to be in sorted order </p>
