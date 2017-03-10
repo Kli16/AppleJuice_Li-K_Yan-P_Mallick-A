@@ -53,13 +53,58 @@ public class runTimeTest extends QuickSort {
 
     public static void main( String[] args ) 
     {
-	for (int i = 1; i <= 12; i++)
-	    System.out.println("Duration for n=" + i*10000 + ": " + testSort_avg(i*10000,3));
-	System.exit(0);
+	/* 
+	   runtimes for pivot at lastmember of the arr 
+	*/
+       
+
+	System.out.println ("Runtimes for pivot point at last member of array");
+
 	System.out.println ("\nData set in powers of ten:\n");
 	for (int i = 1; i <= 10000000; i*=10)
 	    System.out.println("Duration for n = " + i + ": " + testSort_avg(i,3));
-	
+
+
+	for (int i = 1; i <= 50; i++) {
+	    System.out.println ("Duration for n= " + i * 100000 + " : " + testSort_avg(10000 * i, 3));
+	}
+
+	for (int i = 1; i <= 15; i++) {
+	    System.out.println ("Duration for n= " + i * 1000000 + " : " + testSort_avg(100000 * i, 3));
+	}
+
+	System.exit(0); // line that helps during testing; stops program at this point
+
+	System.out.println ("\nRuntimes for pivot point at midpoint  of array");
+
+	System.out.println ("\nData set in powers of ten:\n");
+	for (int i = 1; i <= 10000000; i*=10)
+	    System.out.println("Duration for n = " + i + ": " + testSort_avg(i,2));
+
+
+	for (int i = 1; i <= 50; i++) {
+	    System.out.println ("Duration for n= " + i * 100000 + " : " + testSort_avg(10000 * i, 2));
+	}
+
+	for (int i = 1; i <= 15; i++) {
+	    System.out.println ("Duration for n= " + i * 1000000 + " : " + testSort_avg(100000 * i, 2));
+	}
+
+	System.out.println ("\nRuntimes for pivot point at first member of array");
+
+	System.out.println ("\nData set in powers of ten:\n");
+	for (int i = 1; i <= 10000000; i*=10)
+	    System.out.println("Duration for n = " + i + ": " + testSort_avg(i,1));
+
+
+	for (int i = 1; i <= 50; i++) {
+	    System.out.println ("Duration for n= " + i * 100000 + " : " + testSort_avg(10000 * i, 1));
+	}
+
+	for (int i = 1; i <= 15; i++) {
+	    System.out.println ("Duration for n= " + i * 1000000 + " : " + testSort_avg(100000 * i, 1));
+	}
+	/*
 	System.out.println ("\nData set for interval of 20 from between 10 through 300:\n");
 	for (int x = 10; x <= 300; x+= 20)
 	    System.out.println("Duration for n = " + x + ": " + testSort_avg(x,3));
@@ -83,6 +128,7 @@ public class runTimeTest extends QuickSort {
 	System.out.println ("\nData set in intervals increasing by 2000 from 0 to 1000000:\n");
 	for (int x = 0; x <= 1000000; x+= 2000) 
 	    System.out.println("Duration for n = " + x + ": " + testSort_avg(x,3));
+	*/
     }//end main
     
 }
