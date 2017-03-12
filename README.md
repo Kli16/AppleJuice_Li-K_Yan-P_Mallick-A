@@ -21,6 +21,24 @@
 <h2> METHODOLOGY: </h2>
 
 <h2> DATA AND ANALYSIS: </h2>
+<h3> Graph 1: Last Member of array (10,000 to 30,000 in intervals of 1,000)<br/> </h3>
+This graph appears to depict a linear runtime and the concentration of the points seem mostly even in all the areas. That means that as the array becomes bigger, the runtime (if the pivot choice were the last member of the array) would become larger as well. Since the line of best fit intuitively seems straight, one would could conclude that the runtime is linear if the pivot choice were the last member. However, graphs of larger arrays show otherwise. <br/>
+<h3>Graph 2: Last Member (Powers of 10, until 10,000,000, where data length begins to double)<br/></h3>
+This graph is exponential and is a better analysis of the data because it gives a larger array range. Now we know that the runtime of QuickSort with the pivot choice at the end of the array. As the array size increases, the runtime grows expontentially. <br/>
+<h3> Graph 3: Last member (10^6 to 10^7, using intervals of 1,000,000)<br/> </h3>
+This graph can be analyzed in the same way Graph 2 was. It uses a larger array range and thus is a more accurate representation of the change in runtime of the of array if the pivot choice was at the end. <br/>
+<h3>Graph4: Midpoint (Powers of 10 until 1,000,000, at which number the data size is doubled)<br/></h3>
+This graph appears slightly exponential with the last point. From this we could conclude that starting the pivot choice at the midpoint leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, analysis of later graphs prove otherwise. <br/>
+<h3> Graph 5: (100,000 to 300,000 in intervals of 10,000 using middle number as pivot) <br/> </h3>
+This graph shows a linear runtime. If you were to draw a line of best fit, it would be a constant runtime for each growth in array size. This proves that the runtime of Quicksort wit the midpoint as the pivot choice is constant or linear. <br/>
+<h3> Graph 6: 1,000,000 to 10,000,000  (intervals of 1,000,000) using middle point as pivot <br/> </h3>
+This graph reaches the same conclusion as Graph 5, just with a bigger range of array sizes. The conclusion is the same; the runtime of QuickSort when the pivot choice is the midpoint is linear. <br/>
+<h3> Graph 7: powers of 10 until 1,000,000 where it doubles until reaching 8,000,000, using first member of array <br/></h3>
+This graph appears linear for the most part and seems exponential because of the last point. However, because the data is so sparse, it is hard to tell if that is an outlier case, the graph is actually exponential, or if it is actually linear. From this, we could conclude that starting the pivote choice at the beginning leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, later graphs disprove this. <br/>
+<h3> Graph 8: from 100,000 to 300,000 in intervals of 10,000 using the first member of an array <br/> </h3>
+This graph is linear and shows that the QuickSort runtime with the midpoint as the pivot choice is constant or linear, such that the size of the array correlates linearly with the runtime. <br/>
+<h3> Graph 9: 1,000,000 to 10,000,000 in intervals of 1,000,000 using first member of array as pivot <br/> </h3>
+The same analysis given to graph 8 could be said except this graph is more accurate as it has a larger array range. <br/>
 <p> 
 Access graphs over here: https://docs.google.com/document/d/1JOwsUCQeqSPh2W0CKITnQEoJsQXPOocgrU9JnZ0YDsw/edit
 Created by Alitquan Mallick
