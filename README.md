@@ -22,6 +22,7 @@
 
 <h2> DATA AND ANALYSIS: </h2>
 <p> 
+Access graphs over here: https://docs.google.com/document/d/1JOwsUCQeqSPh2W0CKITnQEoJsQXPOocgrU9JnZ0YDsw/edit
 Created by Alitquan Mallick
 
 Runtimes for pivot point at last member of array
