@@ -1,4 +1,4 @@
-public class runTimeTest extends QuickSort {
+public class QuickSortTester extends QuickSort {
     
 /* populates an array with a designated number
        of random integers */
