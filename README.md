@@ -19,7 +19,7 @@
 <p> The worst pivot choice would be a number that is always at either the extreme high or extreme low end of the array, which means that the next recursed partition is only reduced in size by one number. This would be a n * n runtime. </p>
 
 <h2> METHODOLOGY: </h2>
-
+<p> We timed our QuickSort with various array lengths, and selecting various pivot points, to see if it affected our data. </p>
 <h2> DATA AND ANALYSIS: </h2>
 
 <center> ![DataTable1](DataTable1.png) </center>
@@ -263,3 +263,4 @@ Created by Alitquan Mallick<br/>
 (100000000, 1377.282841796875 )<br/>
 
 <h2> How do pivot selection and data arrangements affect execution time? </h2>
+<p> Our data is consistent across various pivot starting points, and it seems that data arrangement also has no affect on the execution time, given that we randomized our arrays, and the runtimes followed consistent patterns. </p>
