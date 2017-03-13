@@ -43,7 +43,8 @@ This graph can be analyzed in the same way Graph 2 was. It uses a larger array r
 ![DataTable4](DataTable4.png)
 
 <p>
-This graph appears slightly exponential with the last point. From this we could conclude that starting the pivot choice at the midpoint leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, analysis of later graphs prove otherwise. </p> 
+This graph appears slightly exponential with the last point. From this we could conclude that starting the pivot choice at the midpoint leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, analysis of later graphs prove otherwise. 
+</p> 
 
 ![DataTable5](DataTable5.png)
 
@@ -60,7 +61,8 @@ This graph reaches the same conclusion as Graph 5, just with a bigger range of a
 ![DataTable7](DataTable7.png)
 
 <p>
-This graph appears linear for the most part and seems exponential because of the last point. However, because the data is so sparse, it is hard to tell if that is an outlier case, the graph is actually exponential, or if it is actually linear. From this, we could conclude that starting the pivote choice at the beginning leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, later graphs disprove this. </p> 
+This graph appears linear for the most part and seems exponential because of the last point. However, because the data is so sparse, it is hard to tell if that is an outlier case, the graph is actually exponential, or if it is actually linear. From this, we could conclude that starting the pivote choice at the beginning leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, later graphs disprove this. 
+</p> 
 
 ![DataTable8](DataTable8.png)
 
