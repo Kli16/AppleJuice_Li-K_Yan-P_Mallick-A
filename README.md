@@ -21,30 +21,61 @@
 <h2> METHODOLOGY: </h2>
 
 <h2> DATA AND ANALYSIS: </h2>
-<h3> Graph 1: Last Member of array (10,000 to 30,000 in intervals of 1,000)<br/> </h3>
-This graph appears to depict a linear runtime and the concentration of the points seem mostly even in all the areas. That means that as the array becomes bigger, the runtime (if the pivot choice were the last member of the array) would become larger as well. Since the line of best fit intuitively seems straight, one would could conclude that the runtime is linear if the pivot choice were the last member. However, graphs of larger arrays show otherwise. <br/>
-<h3>Graph 2: Last Member (Powers of 10, until 10,000,000, where data length begins to double)<br/></h3>
-This graph is exponential and is a better analysis of the data because it gives a larger array range. Now we know that the runtime of QuickSort with the pivot choice at the end of the array. As the array size increases, the runtime grows expontentially. <br/>
-<h3> Graph 3: Last member (10^6 to 10^7, using intervals of 1,000,000)<br/> </h3>
-This graph can be analyzed in the same way Graph 2 was. It uses a larger array range and thus is a more accurate representation of the change in runtime of the of array if the pivot choice was at the end. <br/>
-<h3>Graph4: Midpoint (Powers of 10 until 1,000,000, at which number the data size is doubled)<br/></h3>
-This graph appears slightly exponential with the last point. From this we could conclude that starting the pivot choice at the midpoint leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, analysis of later graphs prove otherwise. <br/>
-<h3> Graph 5: (100,000 to 300,000 in intervals of 10,000 using middle number as pivot) <br/> </h3>
-This graph shows a linear runtime. If you were to draw a line of best fit, it would be a constant runtime for each growth in array size. This proves that the runtime of Quicksort wit the midpoint as the pivot choice is constant or linear. <br/>
-<h3> Graph 6: 1,000,000 to 10,000,000  (intervals of 1,000,000) using middle point as pivot <br/> </h3>
-This graph reaches the same conclusion as Graph 5, just with a bigger range of array sizes. The conclusion is the same; the runtime of QuickSort when the pivot choice is the midpoint is linear. <br/>
-<h3> Graph 7: powers of 10 until 1,000,000 where it doubles until reaching 8,000,000, using first member of array <br/></h3>
-This graph appears linear for the most part and seems exponential because of the last point. However, because the data is so sparse, it is hard to tell if that is an outlier case, the graph is actually exponential, or if it is actually linear. From this, we could conclude that starting the pivote choice at the beginning leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, later graphs disprove this. <br/>
-<h3> Graph 8: from 100,000 to 300,000 in intervals of 10,000 using the first member of an array <br/> </h3>
-This graph is linear and shows that the QuickSort runtime with the midpoint as the pivot choice is constant or linear, such that the size of the array correlates linearly with the runtime. <br/>
-<h3> Graph 9: 1,000,000 to 10,000,000 in intervals of 1,000,000 using first member of array as pivot <br/> </h3>
-The same analysis given to graph 8 could be said except this graph is more accurate as it has a larger array range. <br/>
-<p> 
-Access graphs over here: https://docs.google.com/document/d/1JOwsUCQeqSPh2W0CKITnQEoJsQXPOocgrU9JnZ0YDsw/edit
-Created by Alitquan Mallick
 
-Runtimes for pivot point at last member of array
-Data set in powers of ten:
+<center> ![DataTable1](DataTable1.png) </center>
+
+<p>
+This graph appears to depict a linear runtime and the concentration of the points seem mostly even in all the areas. That means that as the array becomes bigger, the runtime (if the pivot choice were the last member of the array) would become larger as well. Since the line of best fit intuitively seems straight, one would could conclude that the runtime is linear if the pivot choice were the last member. However, graphs of larger arrays show otherwise. 
+</p>
+
+![DataTable2](DataTable2.png)
+
+<p>
+This graph is exponential and is a better analysis of the data because it gives a larger array range. Now we know that the runtime of QuickSort with the pivot choice at the end of the array. As the array size increases, the runtime grows expontentially. 
+</p>
+
+![DataTable3](DataTable3.png) 
+
+<p>
+This graph can be analyzed in the same way Graph 2 was. It uses a larger array range and thus is a more accurate representation of the change in runtime of the of array if the pivot choice was at the end. 
+</p> 
+
+![DataTable4](DataTable4.png)
+
+<p>
+This graph appears slightly exponential with the last point. From this we could conclude that starting the pivot choice at the midpoint leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, analysis of later graphs prove otherwise. </p> 
+
+![DataTable5](DataTable5.png)
+
+<p>
+This graph shows a linear runtime. If you were to draw a line of best fit, it would be a constant runtime for each growth in array size. This proves that the runtime of Quicksort wit the midpoint as the pivot choice is constant or linear. 
+</p> 
+
+![DataTable6](DataTable6.png)
+
+<p>
+This graph reaches the same conclusion as Graph 5, just with a bigger range of array sizes. The conclusion is the same; the runtime of QuickSort when the pivot choice is the midpoint is linear.
+</p> 
+
+![DataTable7](DataTable7.png)
+
+<p>
+This graph appears linear for the most part and seems exponential because of the last point. However, because the data is so sparse, it is hard to tell if that is an outlier case, the graph is actually exponential, or if it is actually linear. From this, we could conclude that starting the pivote choice at the beginning leads to an exponential runtime, where the size of the array correlates exponentially with the runtime. However, later graphs disprove this. </p> 
+
+![DataTable8](DataTable8.png)
+
+<p>
+This graph is linear and shows that the QuickSort runtime with the midpoint as the pivot choice is constant or linear, such that the size of the array correlates linearly with the runtime. 
+</p> 
+
+![DataTable9](DataTable9.png) 
+
+<p>
+The same analysis given to graph 8 could be said except this graph is more accurate as it has a larger array range. <br/>
+</p> 
+
+<h4> Runtimes for pivot point at last member of array </h4>
+Data set in powers of ten: <br/>
 
 Data in formation (ARR LENGTH, RUNTIME)
 (1, 7.60000036098063E-4 ) <br/>
@@ -58,7 +89,6 @@ Data in formation (ARR LENGTH, RUNTIME)
 (2000000, 241.4168798828125 )<br/>
 (4000000, 477.8561999511719 )<br/>
 (8000000, 1117.9667700195312 )<br/>
-
 
 Data in formation (ARR LENGTH, RUNTIME)<br/>
 Created by Alitquan Mallick<br/>
@@ -92,7 +122,6 @@ Created by Alitquan Mallick<br/>
 (280000, 30.188360061645508 )<br/>
 (290000, 31.196840133666992 )<br/>
 (300000, 34.13496017456055 )<br/>
-<br/>
 
 Data in formation (ARR LENGTH, RUNTIME)<br/>
 Created by Alitquan Mallick<br/>
@@ -107,9 +136,9 @@ Created by Alitquan Mallick<br/>
 (9000000, 1142.6854443359375 )<br/>
 (10000000, 1360.9269970703126 )<br/>
 
-
-Runtimes for pivot point at midpoint  of array<br/>
+<h4> Runtimes for pivot point at midpoint  of array</h4>
 Data set in powers of ten:<br/>
+
 Data in formation (ARR LENGTH, RUNTIME)<br/>
 (1, 3.600000170990825E-4 )<br/>
 (10, 6.800000322982669E-4 )<br/>
@@ -169,9 +198,7 @@ Created by Alitquan Mallick<br/>
 (9000000, 1364.6184716796874 )<br/>
 (10000000, 1571.354443359375 )<br/>
 
-Created by Alitquan Mallick<br/>
-
-Runtimes for pivot point at first member of array<br/>
+<h4> Runtimes for pivot point at first member of array</h4> <br/>
 Data set in powers of ten:<br/>
 
 Data in formation (ARR LENGTH, RUNTIME)<br/>
@@ -186,7 +213,6 @@ Data in formation (ARR LENGTH, RUNTIME)<br/>
 (2000000, 274.08636291503905 )<br/>
 (4000000, 588.1803527832031 )<br/>
 (8000000, 1338.5633154296875 )<br/>
-<br/>
 
 Data in formation (ARR LENGTH, RUNTIME)<br/>
 Created by Alitquan Mallick<br/>
@@ -220,7 +246,6 @@ Created by Alitquan Mallick<br/>
 (280000, 35.80675987243652 )<br/>
 (290000, 35.19712005615234 )<br/>
 (300000, 36.32236022949219 )<br/>
-<br/>
 
 Data in formation (ARR LENGTH, RUNTIME)<br/>
 Created by Alitquan Mallick<br/>
